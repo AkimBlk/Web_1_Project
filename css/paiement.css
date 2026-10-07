@@ -1,0 +1,11 @@
+/* Style pour le texte saisi dans les champs input */
+#form-paiement input[type="text"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: normal !important;
+}
+
+/* Style pour préserver la police de votre site dans les placeholders */
+#form-paiement input::placeholder {
+  font-family: 'LEMONMILK-Regular', sans-serif !important; /* Utilise la police du parent/site */
+}

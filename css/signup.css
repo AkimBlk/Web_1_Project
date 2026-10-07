@@ -1,0 +1,102 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'LEMONMILK-Regular', sans-serif;
+ }
+
+/* Style pour le texte saisi dans les champs input du formulaire d'inscription */
+.signup-container input[type="text"],
+.signup-container input[type="password"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: normal !important;
+}
+
+/* Style pour préserver la police de votre site dans les placeholders */
+.signup-container input::placeholder {
+  font-family: 'LEMONMILK-Regular', sans-serif !important; /* Utilise la police du parent/site */
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signup-container {
+    width: 400px;
+    margin: 100px auto;
+    margin-top: 150px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+
+  .signup-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'LEMONMILK-Bold';
+    font-size: 2em;
+  }
+
+  .signup-container input[type="text"],
+  .signup-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .signup-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+  }
+
+  .signup-container input[type="submit"]:hover {
+    background: #0056b3;
+  }
+
+  .signup-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #0d6efd;
+  }
+
+  /* NAVBAR ET RECHERCHE */
+  .navbar-brand strong { color: #0d6efd !important; }
+  .navbar-nav .nav-link { color: white !important; transition: color 0.3s; }
+  .navbar-nav .nav-link:hover { color: #0d6efd !important; }
+
+  .search-dropdown {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background-color: #212529;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: top 0.4s ease;
+  }
+
+  .search-dropdown.active {
+    top: 0;
+  }
+
+  .search-dropdown input {
+    max-width: 600px;
+  }

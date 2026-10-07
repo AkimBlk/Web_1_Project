@@ -1,0 +1,17 @@
+/* Import de la police */
+@font-face {
+    font-family: 'LEMONMILK-Regular';
+    src: url('../fonts/LEMONMILK-Regular.otf') format('opentype');
+}
+
+body {
+    background-color: #2b2b34; /* Fond sombre pour cohérence */
+    color: white; /* Texte blanc */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pleine hauteur */
+    text-align: center;
+    font-family: 'LEMONMILK-Regular', sans-serif;
+}

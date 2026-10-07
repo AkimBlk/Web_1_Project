@@ -1,0 +1,214 @@
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background: url("../Image/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Message panier vide */
+.empty-cart-message {
+    text-align: center;
+    margin-top: 20vh;
+    padding: 300px;
+}
+
+.empty-cart-message h2 {
+    font-size: 28px; /* Taille du texte */
+    color: #333; /* Couleur du texte */
+    background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    padding: 10px 20px; /* Espacement autour du texte */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.empty-cart-message a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.empty-cart-message a:hover {
+    background: #0056b3; /* Couleur au survol */
+}
+
+/* Titre principal */
+h2 {
+    font-size: 28px; /* Augmenter la taille */
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    padding: 10px 20px; /* Ajoute de l’espace autour du texte */
+    padding-top: 200px; /* Ajoute de l’espace au-dessus du texte */
+    display: inline-block; /* Ajuste la largeur au texte */
+    margin-top: 250px;
+}
+
+/* Table du panier */
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto; /* Centre horizontalement et réduit les marges en haut et en bas */
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95); /* Fond semi-transparent */
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la largeur totale */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optionnel pour un effet propre */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
+}
+
+/* En-têtes de table */
+th {
+    background: #333;
+    color: white;
+    padding: 12px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #444;
+    border: none !important;
+}
+
+/* Cellules de la table */
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* Ligne du total */
+tr:last-child {
+    font-weight: bold;
+    background: #f8f8f8;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border: none !important;
+}
+
+/* Boutons centrés */
+.acheter-btn,
+.btn-continuer,
+.supprimer-btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px; /* Marge pour le séparateur entre les boutons */
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Bouton acheter */
+.acheter-btn {
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    
+}
+
+.acheter-btn:hover {
+    background: #218838;
+}
+
+.btn-continuer {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-continuer:hover {
+    background: #0056b3;
+}
+
+.supprimer-btn {
+    background-color: red !important;
+    color: white !important;
+    border: none !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    text-decoration: none;
+}
+
+.supprimer-btn:hover {
+    background-color: darkred !important;
+}
+
+/* Ajustement des colonnes spécifiques */
+th:nth-child(1), td:nth-child(1) { width: 30%; } /* Colonne Nom */
+th:nth-child(2), td:nth-child(2) { width: 25%; } /* Colonne Prix */
+th:nth-child(3), td:nth-child(3) { width: 15%; } /* Colonne Quantité */
+th:nth-child(4), td:nth-child(4) { width: 25%; } /* Colonne Total */
+th:nth-child(5), td:nth-child(5) { width: 100%; } /* Colonne Actions */
+
+
+.panier-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .panier-wrapper table {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .panier-wrapper h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+
+.centered-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 14px;
+    }
+
+    .acheter-btn, .btn-continuer, .supprimer-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .empty-cart-message h2, h2 {
+        font-size: 22px;
+        padding: 10px 15px;
+    }
+}

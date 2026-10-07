@@ -1,0 +1,352 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Style pour le texte saisi dans les champs input du formulaire de mise à jour */
+.input-container input[type="text"],
+.input-container input[type="password"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: normal !important;
+}
+
+/* Style pour préserver la police de votre site dans les placeholders */
+.input-container input::placeholder {
+  font-family: 'LEMONMILK-Regular', sans-serif !important; /* Utilise la police du parent/site */
+}
+/* profile.css - Style pour la page de profil utilisateur */
+
+/* Conteneur principal */
+.profile-container {
+  width: 600px;
+  margin: 100px auto 50px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.profile-container h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  border-radius: 3px;
+}
+
+/* Section photo de profil */
+.profile-picture-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Boutons pour la photo */
+.photo-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.photo-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: auto;
+  display: block;
+}
+
+.photo-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Bouton supprimer la photo */
+.delete-btn-account {
+  background-color: #dc3545 !important;
+  color: white;
+}
+
+.delete-btn-account:hover {
+  background-color: #bb2d3b;
+}
+.supprimer-photo-btn,
+button[name="delete_photo"],
+input[value="SUPPRIMER LA PHOTO"] {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: auto;
+  display: block;
+}
+
+.supprimer-photo-btn:hover,
+button[name="delete_photo"]:hover,
+input[value="SUPPRIMER LA PHOTO"]:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-2px);
+}
+
+/* Formulaires */
+form {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Messages d'erreur et de succès */
+.error-message {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+  animation: fadeIn 0.5s ease;
+}
+.error-text {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+.success-message {
+  color: #198754;
+  background-color: rgba(25, 135, 84, 0.1);
+  border: 1px solid rgba(25, 135, 84, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Champs désactivés */
+input:disabled,
+input[readonly] {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  color: #6c757d;
+}
+
+/* Label pour les champs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Info-bulle pour les restrictions */
+.password-info {
+  color: #6c757d;
+  font-size: 13px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Ajout d'un effet de transition au focus */
+input:focus {
+  transform: translateY(-2px);
+}
+
+/* Effet de surbrillance pour indiquer les champs requis */
+input:required {
+  background-image: linear-gradient(to right, transparent, transparent);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 8px;
+}
+
+/* Style élégant pour le scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Style pour le bouton de suppression de compte */
+.delete-btn-account {
+  background-color: #dc3545 !important;
+  color: white !important;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.delete-btn-account:hover {
+  background-color: #c82333 !important;
+  transform: translateY(-2px);
+}
+
+/* Adaptations pour mobiles */
+@media (max-width: 576px) {
+  .profile-container {
+    margin: 80px auto 30px;
+    padding: 20px;
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .profile-container h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* BARRE DE RECHERHCE */
+.search-dropdown {
+  position: fixed!important;
+  top: -100px!important;
+  left: 0!important;
+  width: 100%!important;
+  background-color: #212529!important;
+  padding: 8px 20px!important;
+  z-index: 9999!important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3)!important;
+  transition: top 0.4s ease!important;
+  border: none!important;
+  margin-top: 10px!important;
+}
+
+.search-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.search-dropdown.active {
+  top: 0!important;
+}
+
+.search-dropdown input {
+  max-width: 600px!important;
+}
